@@ -8,14 +8,16 @@ var client = new twilio(accountSid, authToken);
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
+// ishaan
 var test = ["question1", "question2", "question3"];
 var correctAnswers = ["answer1", "answer2", "answer3"];
 var responses = [];
+var feedback = "";
+var personal = true; //not a true false quiz
+// end ishaan
 
 var idx = 0;
-var feedback = "";
 var lookingForFeedback = false;
-var personal = true;
 
 function testing(req, res) {
     var twiml = new twilio.twiml.MessagingResponse();
